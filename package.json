@@ -1,0 +1,26 @@
+{
+  "name": "cloudcomp-webapp",
+  "version": "1.0.0",
+  "description": "Final Coursework for Cloud Computing module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gilmoregrills/cloudcomp-webapp.git"
+  },
+  "author": "@gilmoregrills",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gilmoregrills/cloudcomp-webapp/issues"
+  },
+  "homepage": "https://github.com/gilmoregrills/cloudcomp-webapp#readme",
+  "dependencies": {
+    "d3": "^4.7.3",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.25",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
