@@ -3,10 +3,16 @@
 //and classes when I need more functionality/state
 import React from 'react';
 import {render} from 'react-dom';
+import TestComponent from './testComponent.jsx';
 
 class App extends React.Component {
 	render() {
-		return <p>Webpack is watching!</p>;
+		return( 
+		<div>
+			<p>test!</p>
+			<TestComponent />
+		</div>
+		);
 	}
 }
 
