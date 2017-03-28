@@ -8,6 +8,7 @@ const titleStyle = {
 const divStyle = {
 	backgroundColor: '#f4c6ff',
 	textAlign: 'center',
+	marginTop: '-20px',
 };
 
 function Header(props) {
