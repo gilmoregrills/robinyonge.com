@@ -1,6 +1,7 @@
 import React from 'react';
+import {render} from 'react-dom';
 
-class TestComponent extends React.Component {
+class Body extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -24,4 +25,4 @@ class TestComponent extends React.Component {
 
 }
 
-export default TestComponent;
+export default Body;

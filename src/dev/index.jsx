@@ -3,14 +3,16 @@
 //and classes when I need more functionality/state
 import React from 'react';
 import {render} from 'react-dom';
-import TestComponent from './testComponent.jsx';
+import Body from './body.jsx';
+import Header from './header.jsx';
 
 class App extends React.Component {
 	render() {
 		return( 
 		<div>
+			<Header />
 			<p>test!</p>
-			<TestComponent />
+			<Body />
 		</div>
 		);
 	}
