@@ -5,17 +5,30 @@ import React from 'react';
 import {render} from 'react-dom';
 import Body from './body.jsx';
 import Header from './header.jsx';
+import Footer from './footer.jsx';
 
-class App extends React.Component {
-	render() {
-		return( 
+const wrapStyle = {
+	minHeight: 'calc(100vh - 100px)',
+}
+
+const footStyle = {
+	minHeight: '100px',
+	marginBottom: '-20px',
+}
+
+function App(props) {
+	return(
 		<div>
-			<Header />
-			<p>test!</p>
-			<Body />
+			<div style={wrapStyle}>
+				<Header />
+				<p>butts</p>
+				<Body />	
+			</div>
+			<div style={footStyle}>
+				<Footer />
+			</div>
 		</div>
-		);
-	}
+	);
 }
 
 render (
