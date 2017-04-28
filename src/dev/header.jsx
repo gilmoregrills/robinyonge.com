@@ -2,13 +2,13 @@ import React from 'react';
 import {render} from 'react-dom';
 
 const titleStyle = {
-	color: '#ffffff',
+	color: '#E4E4E4',
 	paddingTop: '20px',
 };
 
 const divStyle = {
-	minHeight: '120px',
-	backgroundColor: '#f4c6ff',
+	minHeight: '100px',
+	backgroundColor: '#8267D5',
 	textAlign: 'center',
 	marginTop: '-20px',
 	marginBottom: '20px',

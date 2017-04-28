@@ -2,11 +2,11 @@ import React from 'react';
 import {render} from 'react-dom';
 
 const titleStyle = {
-	color: '#ffffff',
+	color: '#E4E4E4',
 };
 
 const divStyle = {
-	backgroundColor: '#f4c6ff',
+	backgroundColor: '#8267D5',
 	minHeight: '100px',
 	textAlign: 'center',
 };

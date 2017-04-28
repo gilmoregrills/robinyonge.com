@@ -1,5 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
+import TabsMenu from './tabsMenu.jsx';
 
 class Body extends React.Component {
 
@@ -17,8 +18,7 @@ class Body extends React.Component {
 	render() {
 		return (
 			<div>
-			Likes : <span>{this.state.likesCount}</span>
-				<div><button onClick={this.onLike}>Click Me</button></div>
+			<TabsMenu />
 			</div>
 		);
 	}
