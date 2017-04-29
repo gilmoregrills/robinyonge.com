@@ -13,21 +13,26 @@ var config = {
 	module: {
 		loaders : [
 			{
-				test : /\.jsx?/,
+				test : /\.jsx$/,
 				include : APP_DIR,
 				loader : 'babel-loader',
 
 	        	},
 			{
-				test: /\.css?/,
-				loader: 'style-loader!css-loader'
+				test: /\.css$/,
+				loaders: [
+					'style-loader',
+					'css-loader?importLoaders=1',
+				/*	'postcss-loader',*/
+				],
+					
 			},
 			{
-				test: /\.scss?/,
+				test: /\.scss$/,
 				loader: 'sass-loader'
 			}
         	]
-	},
+	},	
 };
 
 module.exports = config;

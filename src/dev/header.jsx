@@ -8,7 +8,7 @@ const titleStyle = {
 
 const divStyle = {
 	minHeight: '100px',
-	backgroundColor: '#8267D5',
+	backgroundColor: '#8489D8',
 	textAlign: 'center',
 	marginTop: '-20px',
 	marginBottom: '20px',
