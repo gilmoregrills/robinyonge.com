@@ -17,8 +17,10 @@ class TabsMenu extends React.Component {
 	
 	render() {
 		var TabsStyle = {
-			backgroundColour: 'blue',
-			marginTop: '-20px',
+			float: 'left',
+			width: '75%',
+			marginTop: '20px',
+
 		};
 		//this is so gross! find a way to inherit this stuff better
 		//inline css is still weird
@@ -47,16 +49,16 @@ class TabsMenu extends React.Component {
 			float: 'left',
 			clear: 'left',
 			marginLeft: '10px',
-			width: 'calc(100% - 20px)',
-			maxHeight: '100px',
+			maxHeight: '70%',
+			width: '100%',
 			overflow: 'auto',
 			background: '#C3D7E0',
 			boxShadow: '4px 5px 1px gray',
 
 		};
 		return(
-			<div>
-			<Tabs style={TabsStyle} index={this.state.index} onChange={this.tabChange} fixed>
+			<span style={TabsStyle}>
+			<Tabs index={this.state.index} onChange={this.tabChange} fixed>
 			//shouldn't need to be in two if/else, but putting it in one didn't work even with enclosing tags
 			{this.state.index == 0? (
 				<Tab style={ActiveTabStyle} label='Projects'><span style={ContentStyle}><Projects /></span></Tab>
@@ -69,7 +71,7 @@ class TabsMenu extends React.Component {
 				<Tab style={ActiveTabStyle} label='About'><span style={ContentStyle}><About /></span></Tab>	
 			)}
 			</Tabs>
-			</div>
+			</span>
 		);
 	}
 }

@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 
 const titleStyle = {
 	color: '#E4E4E4',
-	paddingTop: '20px',
+	paddingTop: '25px',
 };
 
 const divStyle = {
