@@ -5,13 +5,13 @@ class Sidebar extends React.Component {
 
 	render() {
 		var SidebarStyle = {	
-			background: '#A3B8DC',
+			background: '#fef4f8',
 			boxShadow: '4px 5px 1px gray',
 			float: 'right',
 			position: 'relative',
-			marginTop: '20px',
-			marginRight: '10px',
-			marginLeft: '20px',
+			marginTop: '68px', 
+			marginRight: '20px',
+			marginLeft: '10px',
 			padding: '14px 16px',
 			maxWidth: '20%',
 		};

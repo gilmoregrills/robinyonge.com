@@ -6,7 +6,7 @@ const titleStyle = {
 };
 
 const divStyle = {
-	backgroundColor: '#8489D8',
+	backgroundColor: '#c5dafa',
 	minHeight: '100px',
 	textAlign: 'center',
 };

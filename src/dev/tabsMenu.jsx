@@ -20,28 +20,29 @@ class TabsMenu extends React.Component {
 			float: 'left',
 			width: '75%',
 			marginTop: '20px',
+			minWidth: '420px',
 
 		};
-		//this is so gross! find a way to inherit this stuff better
+		//this is so gross! find a way to trim this down
 		//inline css is still weird
 		var ActiveTabStyle = {	
 			textAlign: 'center',
-			borderBottom: '1px solid #C3D7E0',
+			borderBottom: '1px solid #fef4f8',
 			padding: '14px 16px',
 			float: 'left',
 			cursor: 'pointer',
 			marginLeft: '10px',
-			background: '#C3D7E0',
+			background: '#fef4f8',
 			boxShadow: '3px 5px 1px gray',
 		};
 		var InactiveTabStyle = {	
-			borderBottom: '1px solid #A3B8DC',
+			borderBottom: '1px solid #feeff5',
 			textAlign: 'center',
 			padding: '14px 16px',
 			float: 'left',
 			cursor: 'pointer',
 			marginLeft: '10px',
-			background: '#A3B8DC',
+			background: '#eddfec',
 			boxShadow: '1px 5px 1px gray',
 		};
 		var ContentStyle = {
@@ -52,7 +53,7 @@ class TabsMenu extends React.Component {
 			maxHeight: '70%',
 			width: '100%',
 			overflow: 'auto',
-			background: '#C3D7E0',
+			background: '#fef4f8',
 			boxShadow: '4px 5px 1px gray',
 
 		};
