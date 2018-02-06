@@ -18,17 +18,16 @@ const menuStyle = {
 };
 
 const divStyle = {
-	textAlign: 'right',
+	textAlign: 'left',
 	marginTop: '-20px',
-	marginBottom: '-7%',
-	float: 'right',
+	marginBottom: '-3.5%',
+	float: 'left',
 	//clear: 'right',
 	minWidth: '0%',
 };
 
 function Header(props) {
 	return(
-	//spin out menu and title into their own properties? 
 	<div style={divStyle}>
 		<div style={menuStyle}>
 		</div>

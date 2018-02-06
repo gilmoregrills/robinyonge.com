@@ -18,7 +18,7 @@ class TabsMenu extends React.Component {
 	render() {
 		var TabsStyle = {
 			float: 'left',
-			width: '75%',
+			width: '77%',
 			marginTop: '20px',
 			minWidth: '420px',
 
@@ -33,7 +33,7 @@ class TabsMenu extends React.Component {
 			cursor: 'pointer',
 			marginLeft: '10px',
 			background: '#fef4f8',
-			boxShadow: '3px 5px 1px gray',
+			//boxShadow: '3px 5px 1px gray',
 		};
 		var InactiveTabStyle = {	
 			borderBottom: '1px solid #feeff5',
@@ -43,7 +43,7 @@ class TabsMenu extends React.Component {
 			cursor: 'pointer',
 			marginLeft: '10px',
 			background: '#eddfec',
-			boxShadow: '1px 5px 1px gray',
+			//boxShadow: '1px 5px 1px gray',
 		};
 		var ContentStyle = {
 			padding: '14px 16px',
@@ -54,7 +54,7 @@ class TabsMenu extends React.Component {
 			width: '100%',
 			overflow: 'auto',
 			background: '#fef4f8',
-			boxShadow: '4px 5px 1px gray',
+			//boxShadow: '4px 5px 1px gray',
 
 		};
 		return(
