@@ -2,7 +2,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import {Tab, Tabs} from 'react-toolbox/lib/tabs';
 import Projects from './projects.jsx';
-import About from './about.jsx';
+import Stream from './stream.jsx';
 
 class TabsMenu extends React.Component {
 	
@@ -20,7 +20,7 @@ class TabsMenu extends React.Component {
 			width: '77%',
 			marginTop: '20px',
 			minWidth: '420px',
-			height: '100%',
+
 		};
 		//this is so gross! find a way to trim this down
 		//inline css is still weird
@@ -51,6 +51,7 @@ class TabsMenu extends React.Component {
 			width: '100%',
 			overflow: 'auto',
 			background: '#fef4f8',
+
 		};
 		return(
 			<span style={TabsStyle}>
@@ -62,9 +63,9 @@ class TabsMenu extends React.Component {
 				<Tab style={InactiveTabStyle} label='Projects'><span style={ContentStyle}><Projects /></span></Tab>	
 			)}
 			{this.state.index == 0? (
-				<Tab style={InactiveTabStyle} label='About'><span style={ContentStyle}><About /></span></Tab>
+				<Tab style={InactiveTabStyle} label='Stream '><span style={ContentStyle}><Stream /></span></Tab>
 			) : (
-				<Tab style={ActiveTabStyle} label='About ✨'><span style={ContentStyle}><About /></span></Tab>	
+				<Tab style={ActiveTabStyle} label='Stream ✨'><span style={ContentStyle}><Stream /></span></Tab>	
 			)}
 			</Tabs>
 			</span>
