@@ -19,7 +19,8 @@ const headStyle = {
 const wrapStyle = {
 	backgroundColour: '#E4E4E4',
 	minHeight: 'calc(100vh - 100px)',
-	marginTop:'20px'
+	marginTop:'20px',
+	marginBottom: '100px',
 }
 
 const footStyle = {

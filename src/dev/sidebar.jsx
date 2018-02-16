@@ -15,7 +15,6 @@ class Sidebar extends React.Component {
 			padding: '14px 16px',
 			maxWidth: '20%',
 			height: '100%',
-			maxHeight: '100% - 100px',
 		};
 
 		var ListStyle = {
