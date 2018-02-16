@@ -7,9 +7,19 @@ import Body from './body.jsx';
 import Header from './header.jsx';
 import Footer from './footer.jsx';
 
+const headStyle = {
+	textAlign: 'left',
+	marginTop: '-20px',
+	marginBottom: '-3.5%',
+	float: 'left',
+	//clear: 'right',
+	minWidth: '0%',
+};
+
 const wrapStyle = {
 	backgroundColour: '#E4E4E4',
 	minHeight: 'calc(100vh - 100px)',
+	marginTop:'20px'
 }
 
 const footStyle = {
@@ -21,8 +31,10 @@ const footStyle = {
 function App(props) {
 	return(
 		<div>
-			<div style={wrapStyle}>
+			<div style={headStyle}>
 				<Header />
+			</div>
+			<div style={wrapStyle}>
 				<Body />	
 			</div>
 			<div style={footStyle}>

@@ -11,24 +11,15 @@ const titleStyle = {
 };
 
 const menuStyle = {
-	height: '50px',
+	height: '20px',
 	width: '100vw',
 	background: '#c5dafa',
 
 };
 
-const divStyle = {
-	textAlign: 'left',
-	marginTop: '-20px',
-	marginBottom: '-3.5%',
-	float: 'left',
-	//clear: 'right',
-	minWidth: '0%',
-};
-
 function Header(props) {
 	return(
-	<div style={divStyle}>
+	<div>
 		<div style={menuStyle}>
 		</div>
 		<h1 style={titleStyle}>Robin Yonge</h1>

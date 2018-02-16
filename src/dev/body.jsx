@@ -6,6 +6,9 @@ import Sidebar from './sidebar.jsx';
 class Body extends React.Component {
 
 	render() {
+		// var BodyStyle = {
+		// 	height: '100%',
+		// }
 		return (
 			<div>
 			<TabsMenu />
