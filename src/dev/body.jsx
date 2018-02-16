@@ -6,17 +6,23 @@ import Sidebar from './sidebar.jsx';
 class Body extends React.Component {
 
 	render() {
-		// var BodyStyle = {
-		// 	height: '100%',
-		// }
-		return (
-			<div>
-			<TabsMenu />
-			<Sidebar />
-			</div>
-		);
+		let width = window.innerWidth;
+		console.log(width)
+		if (width > 768) {
+			return(
+				<div>
+					<TabsMenu />
+					<Sidebar />
+				</div>
+			);
+		} else {
+			return(
+				<div>
+					<TabsMenu />
+				</div>
+			);
+		}
 	}
-
 }
 
 export default Body;

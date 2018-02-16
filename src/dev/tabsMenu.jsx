@@ -20,8 +20,8 @@ class TabsMenu extends React.Component {
 			width: '77%',
 			marginTop: '20px',
 			minWidth: '420px',
-
 		};
+		if (window.innerWidth < 768) {TabsStyle.width = '100%'}
 		//this is so gross! find a way to trim this down
 		//inline css is still weird
 		var ActiveTabStyle = {	
