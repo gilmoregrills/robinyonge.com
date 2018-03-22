@@ -5,10 +5,13 @@ import Projects from './projects.jsx';
 import Stream from './stream.jsx';
 
 class TabsMenu extends React.Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			index: 0
+		};	
+	}
 	
-	state = {
-		index: 0
-	};
 
 	tabChange = (index) => { 
 		this.setState({index: index});
