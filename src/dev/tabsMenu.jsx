@@ -2,18 +2,19 @@ import React from 'react';
 import {render} from 'react-dom';
 import {Tab, Tabs} from 'react-toolbox/lib/tabs';
 import Projects from './projects.jsx';
-import Stream from './stream.jsx';
+import Blog from './blog.jsx';
 
 class TabsMenu extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
 			index: 0
-		};	
+		};
+		this.tabChange = this.tabChange.bind(this);
 	}
 	
 
-	tabChange = (index) => { 
+	tabChange(index) { 
 		this.setState({index: index});
 	};
 	
@@ -66,9 +67,9 @@ class TabsMenu extends React.Component {
 				<Tab style={InactiveTabStyle} label='Projects'><span style={ContentStyle}><Projects /></span></Tab>	
 			)}
 			{this.state.index == 0? (
-				<Tab style={InactiveTabStyle} label='Stream '><span style={ContentStyle}><Stream /></span></Tab>
+				<Tab style={InactiveTabStyle} label='Blog '><span style={ContentStyle}><Blog /></span></Tab>
 			) : (
-				<Tab style={ActiveTabStyle} label='Stream ✨'><span style={ContentStyle}><Stream /></span></Tab>	
+				<Tab style={ActiveTabStyle} label='Blog ✨'><span style={ContentStyle}><Blog /></span></Tab>	
 			)}
 			</Tabs>
 			</span>

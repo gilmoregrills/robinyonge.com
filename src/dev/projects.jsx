@@ -16,19 +16,21 @@ class Projects extends React.Component {
 	// fetch public projects from Github
 		octokit.repos.getForUser({username: 'gilmoregrills', type: 'owner', sort: 'pushed'})
 		.then(result => {
-			console.log(result.data)
  			this.setState({projects: result.data})
 		})
+		// add logic to fetch tags separately 
 	}
 
-	gridStyle = {
-		display: 'grid',
-		gridColumnGap: '15px',
-		gridRowGap: '15px',
-		gridTemplateColumns: '30% 30% 30%',
-	}
+
 
 	render() {
+		var gridStyle = {
+			display: 'grid',
+			gridColumnGap: '15px',
+			gridRowGap: '15px',
+			gridTemplateColumns: '30% 30% 30%',
+		}
+		
 		if (window.innerWidth < 768) {
 			this.gridStyle.gridTemplateColumns = '100%';
 		}
