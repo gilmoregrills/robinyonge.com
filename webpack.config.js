@@ -5,7 +5,7 @@ var BUILD_DIR = path.resolve(__dirname, 'src/prod');
 var APP_DIR = path.resolve(__dirname, 'src/dev');
 
 var config = {
-	entry: APP_DIR + '/index.jsx',
+	entry: ["babel-polyfill", APP_DIR + '/index.jsx'],
 	output: {
 		path: BUILD_DIR,
 		filename: 'bundle.js'
@@ -15,12 +15,12 @@ var config = {
 			{
 				test : /\.jsx$/,
 				include : APP_DIR,
-				loader : 'babel-loader',
+				use: 'babel-loader',
 
-	        	},
+	        },
 			{
 				test: /\.css$/,
-				loaders: [
+				use: [
 					'style-loader',
 					'css-loader?importLoaders=1',
 				/*	'postcss-loader',*/
@@ -31,7 +31,7 @@ var config = {
 				test: /\.scss$/,
 				loader: 'sass-loader'
 			}
-        	]
+        ]
 	},	
 };
 
