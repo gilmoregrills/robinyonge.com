@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 
 
 const Post = ({postData}) => {
-	console.log(postData)
+	console.log('at post level ' + postData)
 	return(
 		<div>
 			<p>

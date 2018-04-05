@@ -16,7 +16,7 @@ class Blog extends React.Component {
 
 	async fetchPosts() {
 	//fetch public feed of posts from medium
-		let feed = await parser.parseURL(CORS_PROXY + 'https://medium.com/feed/@tonlehrling')
+		let feed = await parser.parseURL(CORS_PROXY + 'https://medium.com/feed/@tonlehrling')	
 		this.setState({posts: feed.items})			
 	}
 
@@ -24,7 +24,7 @@ class Blog extends React.Component {
 		if (this.state.posts == undefined) {
 			return (<p> loading posts... </p>);
 		} else {
-			console.log(this.state.posts)
+			console.log('at blog component level ' + this.state.posts)
 			return (
 				<div>
 					<Post post={this.state.posts} />
