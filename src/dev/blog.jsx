@@ -8,26 +8,29 @@ const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
 class Blog extends React.Component {
 	constructor(props) {
 		super(props)
-		this.state = {
-			posts: undefined
-		};
-		this.fetchPosts();
+		this.posts = undefined
+		this.fetchPosts().then(result => {
+			console.log('results from fetchposts', result)
+			this.posts = result
+			this.setState({posts: result})
+		});
 	}
 
 	async fetchPosts() {
-	//fetch public feed of posts from medium
+	//fetch public feed of posts from medium.
 		let feed = await parser.parseURL(CORS_PROXY + 'https://medium.com/feed/@tonlehrling')	
-		this.setState({posts: feed.items})			
+		return feed.items
 	}
 
+
 	render() {
-		if (this.state.posts == undefined) {
+		if (this.posts == undefined) {
 			return (<p> loading posts... </p>);
 		} else {
-			console.log('at blog component level ' + this.state.posts)
-			return (
+			console.log('using var not state at blog component render level: ', this.posts)
+			return ( 
 				<div>
-					<Post post={this.state.posts} />
+					{this.posts.map((post, i) => <Post postData={post} key={i}/>)}
 				</div>
 			);
 		}
