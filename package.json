@@ -1,17 +1,18 @@
 {
-  "name": "cloudcomp-webapp",
+  "name": "robinyonge.com",
   "version": "1.0.0",
-  "description": "Final Coursework for Cloud Computing module",
+  "description": "Personal Portfolio Site/Generic Web Presence",
   "babel": {
     "presets": [
       "es2015",
       "react"
     ]
   },
-  "main": "",
+  "main": "node server.js",
   "scripts": {
     "dev": "webpack -d --watch",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

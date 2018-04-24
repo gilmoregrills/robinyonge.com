@@ -4,7 +4,6 @@ import {render} from 'react-dom';
 
 const Post = ({postData}) => {
 	console.log('at post component level: ', JSON.stringify(postData))
-	console.log('creator: ')
 	return(
 		<div>
 			<p>
