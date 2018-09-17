@@ -2,16 +2,8 @@
   "name": "robinyonge.com",
   "version": "1.0.0",
   "description": "Personal Portfolio Site/Generic Web Presence",
-  "babel": {
-    "presets": [
-      "es2015",
-      "react"
-    ]
-  },
   "main": "node index.js",
   "scripts": {
-    "dev": "webpack -d --watch",
-    "build": "webpack -p",
     "start": "node index.js"
   },
   "repository": {
