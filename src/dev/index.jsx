@@ -37,7 +37,7 @@ function App(props) {
 				<Header />
 			</div>
 			<div style={wrapStyle}>
-				<Body />	
+				<Body />
 			</div>
 			<div style={footStyle}>
 				<Footer />

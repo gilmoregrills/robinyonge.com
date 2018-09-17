@@ -17,8 +17,8 @@ class Blog extends React.Component {
 	}
 
 	async fetchPosts() {
-	//fetch public feed of posts from medium.
-		let feed = await parser.parseURL(CORS_PROXY + 'https://medium.com/feed/@tonlehrling')	
+	//fetch public feed of posts from medium
+		let feed = await parser.parseURL(CORS_PROXY + 'https://medium.com/feed/@tonlehrling')
 		return feed.items
 	}
 
@@ -28,7 +28,7 @@ class Blog extends React.Component {
 			return (<p> loading posts... </p>);
 		} else {
 			console.log('using var not state at blog component render level: ', this.posts)
-			return ( 
+			return (
 				<div>
 					{this.posts.map((post, i) => <Post postData={post} key={i}/>)}
 				</div>

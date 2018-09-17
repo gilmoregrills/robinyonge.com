@@ -1,4 +1,4 @@
-from node:carbon
+from node:latest
 
 WORKDIR /usr/src/app
 

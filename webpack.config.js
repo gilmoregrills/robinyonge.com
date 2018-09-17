@@ -25,14 +25,14 @@ var config = {
 					'css-loader?importLoaders=1',
 				/*	'postcss-loader',*/
 				],
-					
+
 			},
 			{
 				test: /\.scss$/,
 				loader: 'sass-loader'
 			}
         ]
-	},	
+	},
 };
 
 module.exports = config;

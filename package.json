@@ -8,28 +8,29 @@
       "react"
     ]
   },
-  "main": "node server.js",
+  "main": "node index.js",
   "scripts": {
     "dev": "webpack -d --watch",
     "build": "webpack -p",
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gilmoregrills/cloudcomp-webapp.git"
+    "url": "git+https://github.com/gilmoregrills/robinyonge.com.git"
   },
   "author": "@gilmoregrills",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gilmoregrills/cloudcomp-webapp/issues"
+    "url": "https://github.com/gilmoregrills/robinyonge.com/issues"
   },
-  "homepage": "https://github.com/gilmoregrills/cloudcomp-webapp#readme",
+  "homepage": "https://github.com/gilmoregrills/robinyonge.com#readme",
   "dependencies": {
     "@octokit/rest": "^15.2.5",
     "babel-cli": "^6.24.0",
     "babel-preset-stage-3": "^6.24.1",
     "bootstrap": "^3.3.7",
     "d3": "^4.7.3",
+    "ejs": "^2.6.1",
     "express": "^4.16.3",
     "medium-sdk": "0.0.4",
     "mongodb": "^2.2.35",
