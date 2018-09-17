@@ -6,6 +6,7 @@ import {render} from 'react-dom';
 import Body from './body.jsx';
 import Header from './header.jsx';
 import Footer from './footer.jsx';
+require("@babel/polyfill");
 
 const headStyle = {
 	textAlign: 'left',

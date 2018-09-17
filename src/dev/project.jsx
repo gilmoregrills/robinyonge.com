@@ -6,14 +6,8 @@ const Project = ({proj}) => {
 	return(
 		<div>
 			<p>
-				{proj.name}
+				name
 			</p>
-			<p>
-				{proj.language}
-			</p>
-			<p>
-				{proj.description}
-			</p> 
 		</div>
 	);
 };

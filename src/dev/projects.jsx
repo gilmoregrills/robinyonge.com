@@ -18,7 +18,7 @@ class Projects extends React.Component {
 		.then(result => {
  			this.setState({projects: result.data})
 		})
-		// add logic to fetch tags separately 
+		// add logic to fetch tags separately
 	}
 
 
@@ -30,13 +30,13 @@ class Projects extends React.Component {
 			gridRowGap: '15px',
 			gridTemplateColumns: '30% 30% 30%',
 		}
-		
+
 		if (window.innerWidth < 768) {
 			this.gridStyle.gridTemplateColumns = '100%';
 		}
 		if (this.state.projects == undefined) {
 			return (<p> loading... </p>);
-		} else {		
+		} else {
 			return (
 				<div style={this.gridStyle}>
 					{this.state.projects.map((project, i) => <Project proj={project} key={i}/>)}
