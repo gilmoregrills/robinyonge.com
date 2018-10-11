@@ -15,8 +15,8 @@ const Post = ({postData}) => {
 	);
 };
 
-Post.propTypes = {
-	postData: React.PropTypes.object.isRequired
-};
+// Post.propTypes = {
+// 	postData: React.PropTypes.object.isRequired
+// };
 
 export default Post;

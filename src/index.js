@@ -4,7 +4,7 @@ var react = require('react');
 var app = express();
 
 
-app.use(express.static(path.join(__dirname + 'src')));
+app.use(express.static(path.join(__dirname + 'src/prod')));
 
 app.get('*', (req,res) =>{
     res.sendFile(path.join(__dirname +'/prod/index.html'));

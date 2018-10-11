@@ -31,9 +31,9 @@ class Projects extends React.Component {
 			gridTemplateColumns: '30% 30% 30%',
 		}
 
-		if (window.innerWidth < 768) {
-			this.gridStyle.gridTemplateColumns = '100%';
-		}
+		// if (window.innerWidth < 768) {
+		// 	this.gridStyle.gridTemplateColumns = '100%';
+		// }
 		if (this.state.projects == undefined) {
 			return (<p> loading... </p>);
 		} else {
