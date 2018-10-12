@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: site-deployment
+  labels:
+    app: robinyonge.com
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: robinyonge.com
+  template:
+    metadata:
+      labels:
+        app: robinyonge.com
+    spec:
+      containers:
+      - name: site
+        image: eu.gcr.io/kube-personal/robin-dot-com:latest
+        ports:
+        - containerPort: 8000
