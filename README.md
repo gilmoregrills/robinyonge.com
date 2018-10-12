@@ -1,3 +1,25 @@
-Site is not yet live! 
+# robinyonge.com
 
-The goal is to make a portfolio/personal site, collating all the information from my various presences around the web because I dont want to have to always update it. 
+## Deploy to GKE:
+
+### Build and push docker image:
+
+`docker build . --tag=eu.gcr.io/kube-personal/robin-dot-com`
+
+`docker push eu.gcr.io/kube-personal/robin-dot-com`
+
+### Build terraform templates:
+
+`cd terraform`
+
+`terraform init`
+
+`terraform apply`
+
+### Deploy the site:
+
+kubectl create -f kubernetes/
+
+## Deploy to EKS:
+
+Needs work when EKS is available.

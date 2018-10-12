@@ -1,38 +1,28 @@
-var webpack = require('webpack');
-var path = require('path');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-var BUILD_DIR = path.resolve(__dirname, 'src/prod');
-var APP_DIR = path.resolve(__dirname, 'src/dev');
-
-var config = {
-	entry: ["babel-polyfill", APP_DIR + '/index.jsx'],
-	output: {
-		path: BUILD_DIR,
-		filename: 'bundle.js'
-	},
-	module: {
-		loaders : [
-			{
-				test : /\.jsx$/,
-				include : APP_DIR,
-				use: 'babel-loader',
-
-	        },
-			{
-				test: /\.css$/,
-				use: [
-					'style-loader',
-					'css-loader?importLoaders=1',
-				/*	'postcss-loader',*/
-				],
-
-			},
-			{
-				test: /\.scss$/,
-				loader: 'sass-loader'
-			}
+module.exports = {
+    entry:['@babel/polyfill', './src/dev/index.jsx'],
+    output: {
+        path: path.join(__dirname, '/src/prod'),
+        filename: 'bundle.js'
+    },
+    module:{
+        rules:[
+            {
+                test:/\.jsx$/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
+            },
+            {
+                test:/\.css$/,
+                use: ['style-loader', 'css-loader']
+            }
         ]
-	},
-};
-
-module.exports = config;
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/dev/index.html'
+        })
+    ]
+}
