@@ -18,7 +18,7 @@
 
 ### Deploy the site:
 
-kubectl create -f kubernetes/
+`kubectl apply -f kubernetes/`
 
 ## Deploy to EKS:
 
