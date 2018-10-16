@@ -1,4 +1,5 @@
 # robinyonge.com
+[![Build Status](https://travis-ci.org/gilmoregrills/robinyonge.com.svg?branch=master)](https://travis-ci.org/gilmoregrills/robinyonge.com)
 
 ## Deploy to GKE:
 
