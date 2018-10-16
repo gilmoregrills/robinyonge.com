@@ -1,14 +1,17 @@
 language: node_js
 sudo: false
 services:
-  - docker
+- docker
 node_js:
-  - 10
-  - 9
+- 10
+- 9
+before_install:
+- openssl aes-256-cbc -K $encrypted_b020f84874da_key -iv $encrypted_b020f84874da_iv
+- in account.json.enc -out account.json -d
 install:
-  - npm install
+- npm install
 script:
-  - npm run build
-  - docker build . --tag=eu.gcr.io/kube-personal/robin-dot-com
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push eu.gcr.io/kube-personal/robin-dot-com
+- npm run build
+- docker build . --tag=eu.gcr.io/kube-personal/robin-dot-com
+- docker login -u _json_key -p "$(cat account.json)" https://gcr.io
+- docker push eu.gcr.io/kube-personal/robin-dot-com
