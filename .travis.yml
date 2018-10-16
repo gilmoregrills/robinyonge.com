@@ -1,5 +1,7 @@
 language: node_js
 sudo: false
+services:
+  - docker
 node_js:
   - 10
   - 9
@@ -7,3 +9,4 @@ install:
   - npm install
 script:
   - npm run build
+  - docker build . --tag=eu.gcr.io/kube-personal/robin-dot-com
