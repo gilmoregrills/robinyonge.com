@@ -2,4 +2,3 @@
 node_modules
 terraform/account.json
 terraform/.terraform
-src/prod/*
