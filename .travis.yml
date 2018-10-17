@@ -11,11 +11,10 @@ before_install:
 - unzip secrets.zip
 install:
 - npm install
-- curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/linux/amd64/kubectl
-  && \ chmod +x kubectl && sudo mv kubectl /usr/local/bin/
+- curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/local/bin/
 script:
 - npm run build
 - docker build . --tag=eu.gcr.io/kube-personal/robin-dot-com
 - docker login -u _json_key -p "$(cat terraform/account.json)" eu.gcr.io
 - docker push eu.gcr.io/kube-personal/robin-dot-com
-- kubectl -v
+- kubectl --kubeconfig=kubernetes/kubeconfig apply -f kubernetes/deployment.yml

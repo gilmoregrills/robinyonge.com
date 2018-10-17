@@ -5,3 +5,4 @@ terraform/.terraform
 src/prod/bundle.js
 src/prod/index.html
 kubernetes/kubeconfig
+secrets.zip
