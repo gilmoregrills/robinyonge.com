@@ -6,10 +6,10 @@ node_js:
 - 10
 - 9
 before_install:
-- curl -sLo /tmp/terraform.zip https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip
-- unzip /tmp/terraform.zip -d /tmp
-- sudo mv /tmp/terraform /bin
-- export PATH="~/bin:$PATH"
+# - curl -sLo /tmp/terraform.zip https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip
+# - unzip /tmp/terraform.zip -d /tmp
+# - sudo mv /tmp/terraform /bin
+# - export PATH="~/bin:$PATH"
 - openssl aes-256-cbc -K $encrypted_b020f84874da_key -iv $encrypted_b020f84874da_iv
   -in account.json.enc -out terraform/account.json -d
 install:
@@ -19,6 +19,6 @@ script:
 - docker build . --tag=eu.gcr.io/kube-personal/robin-dot-com
 - docker login -u _json_key -p "$(cat terraform/account.json)" eu.gcr.io
 - docker push eu.gcr.io/kube-personal/robin-dot-com
-- cd terraform
-- terraform init -var 'username=$terraform_gcloud_user' -var 'password=$terraform_gcloud_password'
-- terraform apply -var 'username=$terraform_gcloud_user' -var 'password=$terraform_gcloud_password' -auto-approve
+# - cd terraform
+# - terraform init -var 'username=$terraform_gcloud_user' -var 'password=$terraform_gcloud_password'
+# - terraform apply -var 'username=$terraform_gcloud_user' -var 'password=$terraform_gcloud_password' -auto-approve
