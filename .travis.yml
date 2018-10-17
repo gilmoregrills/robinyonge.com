@@ -7,13 +7,12 @@ node_js:
 - 9
 before_install:
 - openssl aes-256-cbc -K $encrypted_b020f84874da_key -iv $encrypted_b020f84874da_iv
-  -in kubeconfig.enc -out kubernetes/kubeconfig -d
-- openssl aes-256-cbc -K $encrypted_b020f84874da_key -iv $encrypted_b020f84874da_iv
-  -in account.json.enc -out terraform/account.json -d
+  -in secrets.zip.enc -out secrets.zip -d
+- unzip secrets.zip
 install:
 - npm install
-- curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/linux/amd64/kubectl && \
-  chmod +x kubectl && sudo mv kubectl /usr/local/bin/
+- curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/linux/amd64/kubectl
+  && \ chmod +x kubectl && sudo mv kubectl /usr/local/bin/
 script:
 - npm run build
 - docker build . --tag=eu.gcr.io/kube-personal/robin-dot-com
