@@ -17,4 +17,4 @@ script:
 - docker build . --tag=eu.gcr.io/kube-personal/robin-dot-com
 - docker login -u _json_key -p "$(cat terraform/account.json)" eu.gcr.io
 - docker push eu.gcr.io/kube-personal/robin-dot-com
-- kubectl --kubeconfig=kubernetes/kubeconfig apply -f kubernetes/deployment.yml
+- cd kubernetes && sudo chmod -755 k8s-deploy.sh && sudo k8s-deploy.sh
