@@ -51,7 +51,7 @@ class TabsMenu extends React.Component {
 			float: 'left',
 			clear: 'left',
 			marginLeft: '10px',
-			maxHeight: '85%',
+			// maxHeight: '85%',
 			width: '100%',
 			overflow: 'auto',
 			background: '#fef4f8',

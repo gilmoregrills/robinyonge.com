@@ -17,16 +17,14 @@ const headStyle = {
 	minWidth: '0%',
 };
 
-const wrapStyle = {
+const bodyStyle = {
 	backgroundColour: '#E4E4E4',
-	minHeight: 'calc(100vh - 100px)',
 	marginTop:'20px',
-	marginBottom: '100px'
 }
 
 const footStyle = {
-	backgroundColour: '#E4E4E4',
-	minHeight: '100px',
+	// backgroundColour: '#E4E4E4',
+	minHeight: '50px',
 	marginBottom: '-20px',
 }
 
@@ -36,7 +34,7 @@ function App(props) {
 			<div style={headStyle}>
 				<Header />
 			</div>
-			<div style={wrapStyle}>
+			<div style={bodyStyle}>
 				<Body />
 			</div>
 			<div style={footStyle}>

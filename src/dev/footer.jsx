@@ -6,15 +6,14 @@ const titleStyle = {
 };
 
 const divStyle = {
-	backgroundColor: '#c5dafa',
-	minHeight: '100px',
+	//backgroundColor: '#c5dafa',
+	minHeight: '142px',
 	textAlign: 'center',
 };
 
 function Footer(props) {
 	return(
 	<div style={divStyle}>
-		<h1 style={titleStyle}>Footer!</h1>	
 	</div>
 	);
 }

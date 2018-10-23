@@ -2,12 +2,12 @@ import React from 'react';
 import {render} from 'react-dom';
 
 const Project = ({proj}) => {
-
+    console.log('at project component level: ', JSON.stringify(proj))
+    var isfork = proj.fork.toString()
 	return(
 		<div>
-			<p>
-				name
-			</p>
+			<a href={proj.html_url}>{proj.full_name}</a>
+            <p>{proj.description}</p>
 		</div>
 	);
 };
