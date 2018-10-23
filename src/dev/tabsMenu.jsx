@@ -12,23 +12,23 @@ class TabsMenu extends React.Component {
 		};
 		this.tabChange = this.tabChange.bind(this);
 	}
-	
 
-	tabChange(index) { 
+
+	tabChange(index) {
 		this.setState({index: index});
 	};
-	
+
 	render() {
 		var TabsStyle = {
 			float: 'left',
-			width: '77%',
-			marginTop: '20px',
-			minWidth: '420px',
+			width: '72%',
+			marginTop: '12px',
+			// minWidth: '420px',
 		};
 		if (window.innerWidth < 768) {TabsStyle.width = '100%'}
 		//this is so gross! find a way to trim this down
 		//inline css is still weird
-		var ActiveTabStyle = {	
+		var ActiveTabStyle = {
 			textAlign: 'center',
 			borderBottom: '1px solid #fef4f8',
 			padding: '14px 16px',
@@ -37,9 +37,9 @@ class TabsMenu extends React.Component {
 			marginLeft: '10px',
 			background: '#fef4f8',
 		};
-		var InactiveTabStyle = {	
-			borderBottom: '1px solid #feeff5',
+		var InactiveTabStyle = {
 			textAlign: 'center',
+			borderBottom: '1px solid #feeff5',
 			padding: '14px 16px',
 			float: 'left',
 			cursor: 'pointer',
@@ -51,7 +51,7 @@ class TabsMenu extends React.Component {
 			float: 'left',
 			clear: 'left',
 			marginLeft: '10px',
-			maxHeight: '70%',
+			maxHeight: '85%',
 			width: '100%',
 			overflow: 'auto',
 			background: '#fef4f8',
@@ -62,14 +62,14 @@ class TabsMenu extends React.Component {
 			<Tabs index={this.state.index} onChange={this.tabChange} fixed>
 			//shouldn't need to be in two if/else, but putting it in one didn't work even with enclosing tags
 			{this.state.index == 0? (
-				<Tab style={ActiveTabStyle} label='Projects ✨'><span style={ContentStyle}><Projects /></span></Tab>
+				<Tab style={ActiveTabStyle} label='Projects'><span style={ContentStyle}><Projects /></span></Tab>
 			) : (
-				<Tab style={InactiveTabStyle} label='Projects'><span style={ContentStyle}><Projects /></span></Tab>	
+				<Tab style={InactiveTabStyle} label='Projects'><span style={ContentStyle}><Projects /></span></Tab>
 			)}
 			{this.state.index == 0? (
-				<Tab style={InactiveTabStyle} label='Blog '><span style={ContentStyle}><Blog /></span></Tab>
+				<Tab style={InactiveTabStyle} label='Blog'><span style={ContentStyle}><Blog /></span></Tab>
 			) : (
-				<Tab style={ActiveTabStyle} label='Blog ✨'><span style={ContentStyle}><Blog /></span></Tab>	
+				<Tab style={ActiveTabStyle} label='Blog'><span style={ContentStyle}><Blog /></span></Tab>
 			)}
 			</Tabs>
 			</span>
