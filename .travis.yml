@@ -14,7 +14,7 @@ install:
 - curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/local/bin/
 script:
 - npm run build
-- docker build . --tag=eu.gcr.io/kube-personal/robin-dot-com
+- docker build . --tag=eu.gcr.io/kube-personal/robin-dot-com:$TRAVIS_COMMIT
 - docker login -u _json_key -p "$(cat terraform/account.json)" eu.gcr.io
-- docker push eu.gcr.io/kube-personal/robin-dot-com
+- docker push eu.gcr.io/kube-personal/robin-dot-com:$TRAVIS_COMMIT
 # - cd kubernetes && sudo chmod -755 k8s-deploy.sh && sudo k8s-deploy.sh
