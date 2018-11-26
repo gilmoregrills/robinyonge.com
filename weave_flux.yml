@@ -5,7 +5,7 @@ token: "" #Can be left empty if you don't own weave cloud license
 replicaCount: 1
 image:
   repository: quay.io/weaveworks/flux
-  tag: 1.4.2
+  tag: 1.8.1
   pullPolicy: IfNotPresent
 
 service:
@@ -55,7 +55,7 @@ affinity: {}
 
 git:
   # URL of git repo with Kubernetes manifests; e.g. git.url=ssh://git@github.com/weaveworks/flux-example
-  url: "git@github.com:gilmoregrills/robinyonge.com.git"
+  url: "ssh://git@github.com/gilmoregrills/robinyonge.com"
   # Branch of git repo to use for Kubernetes manifests
   branch: "master"
   # Path within git repo to locate Kubernetes manifests (relative path)

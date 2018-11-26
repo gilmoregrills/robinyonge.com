@@ -11,6 +11,8 @@ metadata:
   namespace: "robin"
   labels:
     app: "robin-dot-com"
+  annotations:
+    flux.weave.works/automated: 'true'
 spec:
   replicas: 4
   selector:
