@@ -1,5 +1,6 @@
 language: node_js
 sudo: true
+if: tag IS blank
 services:
 - docker
 node_js:

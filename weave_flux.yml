@@ -78,3 +78,4 @@ ssh:
 args:
 # - --connect=ws://fluxcloud
   - --ci-skip
+  - --ci-skip-message='skip ci'
