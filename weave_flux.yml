@@ -75,5 +75,6 @@ ssh:
   known_hosts: "\n"
 
 #for https://github.com/justinbarrick/fluxcloud/
-#additionalArgs:
+args:
 # - --connect=ws://fluxcloud
+  - --ci-skip
