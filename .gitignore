@@ -1,8 +1,5 @@
 *.DS_Store
 node_modules
-terraform/account.json
-terraform/.terraform
 src/prod/bundle.js
 src/prod/index.html
-kubernetes/kubeconfig
 secrets.zip
