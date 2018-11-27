@@ -1,6 +1,9 @@
 resource "google_container_cluster" "primary" {
-  name               = "personal-cluster"
-  zone               = "europe-west2-a"
+  name               = "cluster"
+  zone               = "europe-west2-b"
+  additional_zones = [
+    "europe-west2-c"
+  ]
   initial_node_count = 1
   project            = "kube-personal"
 
