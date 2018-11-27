@@ -72,7 +72,7 @@ git:
 ssh:
   # Overrides for git over SSH. If you use your own git server, you
   # will likely need to provide a host key for it in this field.
-  known_hosts: "<the-key-of-the-known-host-here>\n"
+  known_hosts: "git@github.com\n"
 
 #for https://github.com/justinbarrick/fluxcloud/
 #additionalArgs:
