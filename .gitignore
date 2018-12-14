@@ -3,3 +3,4 @@ node_modules
 src/prod/bundle.js
 src/prod/index.html
 secrets.zip
+account.json
