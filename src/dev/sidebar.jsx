@@ -26,13 +26,13 @@ class Sidebar extends React.Component {
 			<div style={SidebarStyle}>
 				<ul style={ListStyle}>
 					<li>👩‍💻 <a href="https://github.com/gilmoregrills">github:gilmoregrills</a></li>
-					// add github bio and organisations here
+					-> add github bio and organisations here
 					<li>📷 <a href="https://www.instagram.com/tonlehrling/">instagram:tonlehrling</a></li>
-					// add instagram bio and most recent photo here??
+					-> add instagram bio and most recent photo here??
 					<li>🐦 <a href="https://twitter.com/eel_boy">twitter:eel_boy</a></li>
-					// add twitter bio and a few of my most recent tweets here
+					-> add twitter bio and a few of my most recent tweets here
 				</ul>
-				<p>Lorem Khaled Ipsum is a major key to success. It’s on you how you want to live your life. Everyone has a choice. I pick my choice, squeaky clean. Another one. Mogul talk. Another one. Surround yourself with angels, positive energy, beautiful people, beautiful souls, clean heart, angel. In life you have to take the trash out, if you have trash in your life, take it out, throw it away, get rid of it, major key. Always remember in the jungle there’s a lot of they in there, after you overcome they, you will make it to paradise. You see the hedges, how I got it shaped up? It’s important to shape up your hedges, it’s like getting a haircut, stay fresh.</p>
+				<p>Really slowly working on this site on the side so please don't judge me for how basic it is! The intention with it is to have almost all the content gathered from the APIs of other services I actually use so I don't have to bother updating it manually ever.</p>
 			</div>
 		);
 	}

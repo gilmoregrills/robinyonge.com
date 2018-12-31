@@ -22,12 +22,11 @@ class Blog extends React.Component {
 		return feed.items
 	}
 
-
 	render() {
 		if (this.posts == undefined) {
 			return (<p> loading posts... </p>);
 		} else {
-			console.log('using var not state at blog component render level: ', this.posts)
+			// console.log('using var not state at blog component render level: ', this.posts)
 			return (
 				<div>
 					{this.posts.map((post, i) => <Post postData={post} key={i}/>)}

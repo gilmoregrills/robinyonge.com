@@ -6,8 +6,8 @@ const Project = ({proj}) => {
     var isfork = proj.fork.toString()
 	return(
 		<div>
-			<a href={proj.html_url}>{proj.full_name}</a>
-            <p>{proj.description}</p>
+			<h3><a href={proj.html_url}>{proj.full_name}</a></h3>
+            <h4>{proj.description}</h4>
 		</div>
 	);
 };
